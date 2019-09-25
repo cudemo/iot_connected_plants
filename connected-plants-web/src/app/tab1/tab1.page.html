@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      {{title}}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="welcome-card">
+    <ion-img src="/assets/shapes.jpg"></ion-img>
+    <ion-card-header>
+      <h1> Welcome to {{ title }}!</h1>
+      <ion-card-title> Current Threshold: {{ threshold }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <form (ngSubmit)="onSubmit()">
+        <ion-item>
+          <ion-label>Set New Threshold</ion-label>
+          <ion-input type="number" required [(ngModel)]="newThreshold" name="title"></ion-input>
+        </ion-item>
+        <ion-button ion-button type="submit" block shape="round">Save</ion-button>
+      </form>
+    </ion-card-content>
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <div>
+              <iframe width="450" height="260" style="border: 1px solid #cccccc;"
+                src="https://thingspeak.com/channels/753425/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&timescale=30&title=Moisture+Sensor&type=spline"></iframe>
+            </div>
+          </ion-col>
+          <ion-col>
+            <div>
+              <iframe width="450" height="260" style="border: 1px solid #cccccc;"
+                src="https://thingspeak.com/channels/753425/charts/8?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Control+-+give+some+water+initiated&type=spline"></iframe>
+            </div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <div>
+              <iframe width="450" height="260" style="border: 1px solid #cccccc;"
+                src="https://thingspeak.com/channels/753425/charts/3?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&timescale=20&title=Temperature+Sensor&type=spline"></iframe>
+            </div>
+          </ion-col>
+          <ion-col>
+            <div>
+              <iframe width="450" height="260" style="border: 1px solid #cccccc;"
+                src="https://thingspeak.com/channels/753425/charts/4?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&timescale=20&title=Humidity+Sensor&type=spline&xaxis=Humidity"></iframe>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

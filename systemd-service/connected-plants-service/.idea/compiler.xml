@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="connected-plants-service.main" target="11" />
+      <module name="connected-plants-service.test" target="11" />
+      <module name="connected-plants.main" target="11" />
+      <module name="connected-plants.test" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

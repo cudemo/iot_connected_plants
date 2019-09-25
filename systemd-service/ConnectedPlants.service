@@ -1,0 +1,12 @@
+[Unit]
+Description = Java Service
+After network.target = ConnectedPlants.service
+
+[Service]
+Type = forking
+ExecStart = /usr/local/bin/ConnectedPlants.sh start
+ExecStop = /usr/local/bin/ConnectedPlants.sh stop
+ExecReload = /usr/local/bin/ConnectedPlants.sh reload
+
+[Install]
+WantedBy=multi-user.target

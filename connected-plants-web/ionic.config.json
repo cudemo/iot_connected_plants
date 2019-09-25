@@ -1,0 +1,7 @@
+{
+  "name": "connected-plants-web",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
